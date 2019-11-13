@@ -1,25 +1,25 @@
 # Propositional logic reasoner
 
 This mini-project was developed for the Artificial Intelligence and Decision Systems course at Instituto Superior Técnico (IST). A propositional logic reasoner based on the Resolution principle consists of the following key elements: 
-* a program to convert logical sentences in propositional logic into the clausal normal form (CNF) 'convert.py'
-* a resolution-based theorem prover for propositional logic, assuming a CNF knowledge base 'prove.py'
+* a program to convert logical sentences in propositional logic into the clausal normal form (CNF) `convert.py`
+* a resolution-based theorem prover for propositional logic, assuming a CNF knowledge base `prove.py`
 
 Read the [assignment description](assignment-details.pdf) for more details.
 
 ## Running the tests
-The CNF convertor ('convert.py') should read from stdin sentences, one per line, and output to stdout disjunctions, one per line. Example usage:
+The CNF convertor (`convert.py`) should read from stdin sentences, one per line, and output to stdout disjunctions, one per line. Example usage:
 ```
-python convert.py < sentences.txt 
-```
-
-The theorem prover ('prove.py') should read from stdin CNF clauses, one per line, using the same format of the CNF convertor output
-```
-python3 prover.py < cnf.txt 
+python convert.py < tests/sentences.txt 
 ```
 
-Both programs should work in tandem, that is,the output of 'convert.py' can be directly fed into 'prove.py' using shell pipes
+The theorem prover (`prove.py`) should read from stdin CNF clauses, one per line, using the same format of the CNF convertor output
 ```
-python3 convert.py < problem.txt | python3 prover.py
+python3 prover.py < tests/cnf.txt 
+```
+
+Both programs should work in tandem, that is, the output of `convert.py` can be directly fed into `prove.py` using shell pipes
+```
+python3 convert.py < tests/problem.txt | python3 prover.py
 ```
 ## Authors
 
