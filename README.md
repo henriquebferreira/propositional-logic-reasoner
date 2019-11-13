@@ -14,12 +14,12 @@ python convert.py < tests/sentences.txt
 
 The theorem prover (`prove.py`) should read from stdin CNF clauses, one per line, using the same format of the CNF convertor output
 ```
-python3 prover.py < tests/cnf.txt 
+python prover.py < tests/cnf.txt 
 ```
 
 Both programs should work in tandem, that is, the output of `convert.py` can be directly fed into `prove.py` using shell pipes
 ```
-python3 convert.py < tests/problem.txt | python3 prover.py
+python convert.py < tests/problem.txt | python prover.py
 ```
 ## Authors
 
